@@ -7,10 +7,10 @@ void print_vetor(float *vetor, char letra_vetor){
 	printf("Vetor %c: [", letra_vetor);
 	while(i<5){
 		if(i==4){
-			printf("%d", vetor[i]);
+			printf("%.2f", vetor[i]);
 			break;
 		}
-		printf("%d,", vetor[i]);
+		printf("%.2f, ", vetor[i]);
 		i++;
 	}
 	printf("]\n");
@@ -23,12 +23,12 @@ int main(int argc, char *argv[]) {
 	
 	for(i=0; i<5; i++){
 		printf("Valor %d do vetor A: ", i+1);
-		scanf("%d", &A[i]);
+		scanf("%f", &A[i]);
 	}
 	
 	for(i=0; i<5; i++){
 		printf("Valor %d do vetor B: ", i+1);
-		scanf("%d", &B[i]);
+		scanf("%f", &B[i]);
 	}
 	
 	for(i=0; i<5; i++){
