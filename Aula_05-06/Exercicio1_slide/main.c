@@ -78,8 +78,8 @@ int main(int argc, char *argv[]) {
 	for(i=0; i<10; i++){
 		if(bo[i].ano_ocorrencia == input_ano_ocorrencia){
 			for(j=0; j<10; j++){
-				if(bo[i].codigo_bo == carro[i].codigo_bo){
-					if(strcmp(input_fabricante, carro[i].fabricante) == 0){
+				if(bo[i].codigo_bo == carro[j].codigo_bo){
+					if(strcmp(input_fabricante, carro[j].fabricante) == 0){
 						boletins_encontrados++;
 					}
 				}
