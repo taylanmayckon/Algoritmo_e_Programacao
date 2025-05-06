@@ -24,7 +24,7 @@ typedef struct{
 } Carro;
 
 int main(int argc, char *argv[]) {
-	int i, input_ano_ocorrencia, boletins_encontrados=0;
+	int i, j, input_ano_ocorrencia, boletins_encontrados=0;
 	char input_fabricante[10];
 	Boletim bo[10];
 	Carro carro[10];
@@ -77,8 +77,12 @@ int main(int argc, char *argv[]) {
 		
 	for(i=0; i<10; i++){
 		if(bo[i].ano_ocorrencia == input_ano_ocorrencia){
-			if(strcmp(input_fabricante, carro[i].fabricante) == 0){
-				boletins_encontrados++;
+			for(j=0; j<10; j++){
+				if(bo[i].codigo_bo == carro[i].codigo_bo){
+					if(strcmp(input_fabricante, carro[i].fabricante) == 0){
+						boletins_encontrados++;
+					}
+				}
 			}
 		}
 	}
